@@ -1,0 +1,16 @@
+.hapuspemilih p {
+	margin-top: -15px !important;
+	font-size: small;
+}
+
+/* RESPONSIVE */
+@media (min-width: 992px) {
+
+	.hapuspemilih p {
+		margin-top: 8px !important;
+		margin-left: -20px;
+		font-size: 15px;
+	}
+
+
+}

@@ -1,0 +1,625 @@
+/*font*/
+@font-face {
+	font-family: 'BebasNeue';
+	src: url(../font/BebasNeue-Regular.woff) format ('woff');
+}
+
+
+/* Navbar */
+
+.navbar {
+	background-color: rgba(0, 0, 0, 0.856) !important;
+	position: sticky;
+	width: 100%;
+	z-index: 9999999999;
+}
+
+#logo {
+	vertical-align: middle;
+}
+
+.navbar-brand span {
+	font: Poppins;
+	font-size: 1.8rem;
+	line-height: 1.2;
+	font-weight: 600;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar-brand b {
+	font-weight: 300;
+	display: block;
+	font-size: 40%;
+	line-height: 1;
+}
+
+.nav-item {
+	color: #ffffff !important;
+}
+
+.cover-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.699);
+}
+
+/* Jumbotron */
+.jumbotron {
+
+	background: url(../img/jumbotron-bg.jpg);
+	background-size: cover;
+	height: 540px;
+	position: relative;
+	z-index: -1;
+}
+
+.jumbotron::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	bottom: 0;
+}
+
+.jumbotron .container {
+	color: white;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+
+.logo {
+	margin: -35px -107px -40px 25px;
+	float: left;
+	height: 48px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.jumbotron .display-4 {
+	font-weight: 200;
+	font-size: 2.6em;
+	margin-top: 100px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	margin-bottom: 50px;
+
+}
+
+.display-3 {
+	font-size: 25pt;
+	margin-top: -60px;
+}
+
+
+.jumbotron .display-4 span {
+	font-weight: 500;
+	color: rgb(255, 255, 255);
+
+}
+
+.title h2 {
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+
+
+
+/* gambar menu gallery */
+.gambar h1 {
+	margin: 50px 0 20px;
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+	font-size: 20px;
+}
+
+.container2 {
+	width: 300px;
+	background-color: white;
+	margin: auto;
+	box-shadow: 0 0 3px rgba(0, 0, 0.5);
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	padding-top: -1px;
+	border-radius: 8px;
+}
+
+.gambar2 li {
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	border: 3px solid rgb(241, 217, 0);
+	margin-top: 10px;
+	position: relative;
+	margin-left: 85px;
+
+
+}
+
+.clear {
+	clear: both;
+}
+
+.gambar2 li span {
+	display: block;
+	width: 120px;
+	height: 120px;
+	background-color: #272727a8;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 120px;
+	color: rgb(226, 230, 0);
+	text-shadow: 1px 1px 1px rgb(219, 179, 0);
+	opacity: 0;
+	transition: .3s;
+	transform: scale(0) rotate(0);
+
+}
+
+.gambar2 li a:hover span {
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+
+.gambar2 li,
+.gambar2 li img,
+.gambar2 li span {
+	border-radius: 50%;
+
+}
+
+/*overlay*/
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 999999;
+	transition: .7s;
+	text-align: center;
+	padding: 40px 0;
+
+}
+
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .7);
+}
+
+.overlay img {
+	max-height: 100%;
+	box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+}
+
+.overlay .close {
+	position: absolute;
+	top: 13px;
+	color: #ffffff;
+	font-size: 13px;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid white;
+	padding: 5px;
+	line-height: 14px;
+	opacity: 0;
+
+}
+
+.overlay:target .close {
+	animation: slideDownFade .5s .5s forwards;
+}
+
+.overlay:target img {
+	animation: zoomDanFade 1s;
+}
+
+/* animasi */
+@keyframes zoomDanFade {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slideDownFade {
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+/* gallery */
+.gallery {
+	padding-top: 130px;
+	background-color: #272727;
+}
+
+.gallery p {
+	font-size: 1.4em;
+	text-align: center;
+	font-weight: 200;
+	font-style: italic;
+	margin-bottom: 30px;
+	color: #ffffff;
+}
+
+.gallery img {
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+	border-radius: 50%;
+	filter: grayscale(1);
+}
+
+.gallery .img-main {
+	width: 100px;
+	height: 100px;
+	margin-top: -5px;
+	filter: grayscale(0);
+}
+
+.gallery .info-text h5 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.gallery .info-text p {
+	font-size: 12px;
+	margin-top: -5px;
+	color: #acacac;
+	font-style: normal;
+}
+
+
+/* Utility */
+.tombol {
+	border-radius: 40px;
+	text-transform: uppercase;
+}
+
+
+.visibtn h2 {
+	font-size: 22px;
+	color: #000000;
+	font-weight: 500;
+
+}
+
+.visi,
+.misi {
+	background-color: #00000018;
+	margin-bottom: 30px;
+	border-radius: 30px;
+}
+
+.figurevisi {
+	padding: 14px;
+	font-size: 16px;
+
+}
+
+.figuremisi {
+	padding: 14px;
+	font-size: 16px;
+}
+
+.periode h4 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* Gallery */
+
+.container.gallery-container {
+	background-color: #fff;
+	color: #35373a;
+	border-radius: 20px;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-container h1 {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+}
+
+.gallery-container p.page-description {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	max-width: 800px;
+	margin: 8px auto;
+	color: #888;
+	font-size: 18px;
+}
+
+.tz-gallery {
+	padding: 40px;
+}
+
+.tz-gallery .lightbox img {
+	width: 100%;
+	margin-bottom: 30px;
+	transition: 0.2s ease-in-out;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tz-gallery img {
+	border-radius: 4px;
+}
+
+.baguetteBox-button {
+	background-color: transparent !important;
+}
+
+
+@media(max-width: 768px) {
+
+	.container.gallery-container {
+		border-radius: 0;
+	}
+}
+
+/* Akhir Gallery */
+
+footer {
+	background-color: rgb(20, 20, 20);
+	margin-top: 70px;
+	padding-top: 30px;
+	position: relative;
+	bottom: 0 !important;
+}
+
+footer p {
+	margin-top: -10px;
+	color: rgb(207, 207, 207);
+	font-size: 0.8em;
+	font-family: 'Poppins', sans-serif;
+}
+
+footer p i {
+	color: red;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+/* RESPONSIVE */
+@media (min-width: 992px) {
+	.navbar {
+		margin-top: -10px;
+		background-color: rgba(24, 24, 24, 0.856) !important;
+	}
+
+	.navbar-brand span {
+		font-size: 2.3rem;
+	}
+
+	.navbar-brand b {
+		font-weight: 300;
+		font-size: 40%;
+	}
+
+	.info-panel h4 {
+		color: #acacac;
+		font-size: 35px;
+		font-weight: bold;
+		margin-top: 20px;
+		text-transform: uppercase;
+	}
+
+	/* Info Panel */
+	.info-panel {
+		background-color: rgba(32, 32, 32, 0.596);
+		padding: 5px;
+		margin-top: -120px;
+		border-radius: 12px;
+		box-shadow: 0 3px 17px rgba(226, 0, 0, 0.6);
+	}
+
+	/* Workingspace */
+	.workingspace {
+		padding-top: 40px;
+		text-align: center;
+	}
+
+	.workingspace h2 {
+		font-size: 52px;
+		text-transform: uppercase;
+		font-weight: 200;
+		text-align: center;
+	}
+
+	.workingspace h2 span {
+		font-weight: 500;
+	}
+
+	.workingspace p {
+		font-size: 18px;
+		color: rgb(0, 0, 0);
+		font-weight: 300;
+		text-align: center;
+	}
+
+
+	.navbar-brand,
+	.nav-link {
+		color: white !important;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+	}
+
+	.nav-link {
+		text-transform: uppercase;
+		margin-right: 20px;
+	}
+
+	.nav-link:hover::after,
+	.nav-link.active::after {
+		content: '';
+		display: block;
+		border-bottom: 3px solid #0B63DC;
+		margin: auto;
+		margin-bottom: -8px;
+		width: 50%;
+		padding-top: 5px;
+	}
+
+
+	.jumbotron {
+		margin-top: -90px;
+		height: 640px;
+	}
+
+	.jumbotron .display-4 {
+		font-size: 5em;
+		margin-top: 150px;
+
+	}
+
+
+	.workingspace {
+		text-align: left;
+	}
+
+
+	/* gambar menu gallery */
+	.gambar h1 {
+		margin: 50px 0 10px;
+		text-align: center;
+		text-shadow: 1px 1px 2px black;
+		font-size: 40px;
+	}
+
+	.container2 {
+		width: 1200px;
+		background-color: white;
+		margin: auto;
+		box-shadow: 0 0 3px rgba(0, 0, 0.5);
+		margin-bottom: 10px;
+		padding-bottom: 5px;
+		padding-top: -1px;
+		border-radius: 8px;
+	}
+
+	.gambar2 li {
+		width: 120px;
+		height: 120px;
+		overflow: hidden;
+		border: 3px solid rgb(241, 217, 0);
+		float: left;
+		margin-right: -40px;
+		position: relative;
+		margin-left: 50px;
+
+	}
+
+	.center {
+		margin-left: 19%;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.gambar2 li span {
+		display: block;
+		width: 120px;
+		height: 120px;
+		background-color: #272727a8;
+		position: absolute;
+		top: 0;
+		text-align: center;
+		line-height: 120px;
+		color: rgb(226, 230, 0);
+		text-shadow: 1px 1px 1px rgb(219, 179, 0);
+		opacity: 0;
+		transition: .3s;
+		transform: scale(0) rotate(0);
+
+	}
+
+	.gambar2 li a:hover span {
+		opacity: 1;
+		transform: scale(1) rotate(360deg);
+	}
+
+	.gambar2 li,
+	.gambar2 li img,
+	.gambar2 li span {
+		border-radius: 50%;
+
+	}
+
+	.gallery p {
+		font-size: 2em;
+	}
+
+}
+
+
+/*personil*/
+.row {
+	margin: 0;
+
+}
+
+
+
+
+
+
+
+
+.zero-panel {
+	padding: 1em;
+}
+
+
+
+/* GALLERY */
+
+.caption-content span,
+.caption-content small {
+	color: #ffffff;
+}
+
+/* FOR COLOR */
+.danger {
+	background-color: rgb(0, 0, 0);
+}
+
+.background1 {
+	background-color: #161616;
+}
+
+.font {
+	color: white;
+	margin-bottom: 20px;
+}
